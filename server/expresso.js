@@ -31,9 +31,9 @@ app.get('/contact', function(req,res){
 app.get('/sendmail', function(req, res, next){
 
   transporter.sendMail({
-    from: 'celdjl@gmail.com',
+    from: 'Luis Matamoros ✔ <celdjl@gmail.com>',
     to: 'luis.m4a@gmail.com',
-    subject: 'Password recovery',
+     subject: 'Hello ✔', // Subject line
     template:'recover',
     context: {
       username:'djl544bb',
@@ -44,7 +44,7 @@ app.get('/sendmail', function(req, res, next){
     if(err){
       res.send("email malo");
     }
-
+ console.log('Message sent: ');
     res.send("good email");
   });
 
